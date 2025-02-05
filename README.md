@@ -42,7 +42,7 @@ En la primera línea se utiliza la biblioteca ya descrita "wfdb" para leer el ar
 En esta parte se usa "matplotlib" para graficar la señal en función del tiempo, en donde sus ejes indican el tiempo en segundos y la Amplituden milivoltios. Lo anterior permite comprender el comportamiento de la onda en el tiempo. El uso de plt.grid añade
 una cuadrícula que facilita la interpretación de los valores.
 
-![señal_ecg_base](imagenes/señal_ecg_base.png)
+![Image](https://github.com/user-attachments/assets/2a6ba853-766c-4681-833e-ca576e693ad2)
 
 En el electrocardiograma mostrado se logra percibir que existen picos de voltaje altos con respecto al tiempo y en realación a los demas picos, que son a su véz complejos QRS, se percibe que una amplitud de los QRS normales está alrededor de 1mV, sin embargo, hay complejos QRS que superan la amplitud de 2mV, a este fenómeno se le conoce como una estrasístole ventricular, que corresponde a una forma monomórfica ya que todos las extrosístoles poseen amplitudes positivas.
 
