@@ -202,6 +202,19 @@ El SNR es una métrica clave para evaluar la calidad de la señal. Se calcula co
         plt.title("Señal con Ruido Gaussiano")
         plt.legend()
 
+        plt.subplot(4, 1, 3)
+        plt.plot(impulso_signal, label="Ruido Impulsivo", color="blue")
+        plt.title("Señal con Ruido Impulsivo")
+        plt.legend()
+
+        plt.subplot(4, 1, 4)
+        plt.plot(artefacto_signal, label="Ruido de Artefacto", color="green")
+        plt.title("Señal con Ruido de Artefacto")
+        plt.legend()
+
+        plt.tight_layout()
+        plt.show()
+
 En esta sección, se superponen las gráficas de la señal original y las señales con ruido en una sola figura. Esto facilita la comparación visual y permite apreciar cómo cada tipo de ruido distorsiona la señal. La organización en subgráficas (plt.subplot) es especialmente útil para presentar múltiples señales de manera ordenada y clara. Esta comparación es fundamental para evaluar el impacto del ruido y para decidir qué técnicas de procesamiento son necesarias para mejorar la calidad de la señal.
 
 ![Image](https://github.com/user-attachments/assets/48bf4fbe-d12d-4484-a4bc-ae6559672f38)
