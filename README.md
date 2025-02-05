@@ -58,7 +58,7 @@ En el electrocardiograma mostrado se logra percibir que existen picos de voltaje
 
 El histograma que realizamos permite observar la distribución de amplitudes de la señal ECG. Se divide en 50 intervalos (bins=50), y la frecuencia se normaliza (density=True) para que el área total bajo el histograma sume 1. Esto permite comparar la distribución de amplitudes con una función de probabilidad. El histograma es útil para identificar patrones estadísticos en la señal, como la concentración de valores alrededor de la media. La normalización es particularmente importante cuando se desea comparar histogramas de diferentes señales o con distribuciones teóricas.
 
-![Histograma_señal](imagenes/Histograma_señal.png)
+![Image](https://github.com/user-attachments/assets/e7d8cfb7-e0d5-4a66-bb24-5d58ba1771bb)
 
 Frente al histograma se puede ver que describe una señal ECG con una distribución de amplitudes que se asemeja a una campana de Gauss, con un pico angosto y simétrico alrededor de -1. La ligera asimetría a la izquierda y la alta densidad de probabilidad en el pico indican que la señal es estable y tiene una variabilidad relativamente baja. Esto es consistente con una señal ECG limpia y bien capturada, donde la mayor parte de la actividad eléctrica del corazón se concentra en un rango estrecho de amplitudes.
 
@@ -109,7 +109,7 @@ Coeficiente de variación: Relaciona la desviación estándar con la media, lo q
 
 Se utiliza "gaussian_kde" para estimar la función de densidad de probabilidad (PDF) de la señal. Esta función suaviza el histograma y proporciona una curva continua que describe cómo se distribuyen las amplitudes de la señal. La gráfica resultante es una campana de Gauss, que muestra la probabilidad de que la señal tome ciertos valores de amplitud. Esto es útil para modelar la señal y compararla con distribuciones teóricas. La PDF es una herramienta poderosa en el análisis de señales, ya que permite entender la distribución subyacente de los datos.
 
-![Funcion_gausiana](imagenes/Funcion_gausiana.png)
+![Image](https://github.com/user-attachments/assets/f844b03b-efbc-48e6-a6b7-e0c0639fcc9f)
 
 En la imagen encontramos la grafica como tal de la campana de gauss, la señal dada se puede identificar como una campana de gauss leptocurtica, ya que si se observa tanto la forma de la campana  como el pico maximo se da una curtosis positiva esto significa que el  indicador estadístico tiene una  distribución de datos con un pico más pronunciado y colas más pesadas demostrando asi  una distribución normal. Todo lo anterior coincide con el diagnótico presentado con anterioridad, en donde existen picos pronunciados a causa de las extrasístoles ventriculares. Por último resalta su alto grado de concordancia con el histograma anteriormente visto.
 
@@ -122,7 +122,7 @@ a. Ruido Gaussiano
 
 El ruido gaussiano se genera con media 0 y desviación estándar 0.1, simulando interferencias aleatorias comunes en señales reales. Al sumarlo a la señal original, se obtiene una señal corrupta que mantiene la forma general de la ECG pero con distorsiones suaves. Este tipo de ruido es común en sistemas electrónicos y puede ser mitigado con técnicas de filtrado.
 
-![sr_gauss](imagenes/sr_gauss.png)
+![Image](https://github.com/user-attachments/assets/9ccdbdd7-6f5d-4779-9301-1b30fc007e0d)
 
 El ruido gaussiano es únicamente el que presenta una distribución de Gauss, donde las variaciones electromagnéticas normalmente son muy pequeñas del orden de los microvoltios siendo despreciable en la mayoría de sistemas, este tipo de ruido es común debido a interferencias térmicas, electrónicas o ambientales, en la gráfica podemos ver una gran diferencia con la de ruido impulsivos ya que en esta los picos son mas suaves y están distribuidas a lo largo de toda la señal, aun así, se pueden notar algunos picos pronunciados en ciertos puntos, lo que sugiere que la señal base tiene momentos destacados que sobresalen incluso con la adición del ruido.
 
@@ -133,7 +133,7 @@ b. Ruido de Impulso
 
 Este ruido simula interferencias abruptas, como picos aleatorios. Se genera con una probabilidad del 5% en cada muestra, lo que representa eventos esporádicos pero intensos. Este tipo de ruido es común en entornos con interferencias electromagnéticas y puede ser particularmente problemático porque introduce distorsiones significativas en la señal.
 
-![sr_impulso](imagenes/sr_impulso.png)
+![Image](https://github.com/user-attachments/assets/4adf7521-257b-4c3e-870e-8a8fdde3ada3)
 
 La imagen nos da una gráfica que nos indica una señal con ruido de impulso  que se ve afectada por un tipo de ruido que se caracteriza por picos de tensión o sobresaltos en el suministro de energía, en la cual existen picos  muy marcados y violentos los cuales sobresalen del patrón general de la señal lo que es muy característico del ruido impulsivo.
 
@@ -147,7 +147,7 @@ c. Ruido Artefacto
 
 El ruido de impulso  se caracteriza por su corta duración y una presión sonora que aumenta rápidamente, en la  imagen podemos ver una gráfica que nos indica una señal con ruido de impulso que se ve afectada por un tipo de ruido que se caracteriza por picos de tensión o sobresaltos en el suministro de energía, en la cual existen picos  muy marcados y violentos los cuales sobresalen del patrón general de la señal lo que es muy característico del ruido impulsivo. Este ruido se debe a precisamente las palpitaciones del paciente, ya que esto genera un leve eco en la medición.
 
-![sr_artefacto](imagenes/sr_artefacto.png)
+![Image](https://github.com/user-attachments/assets/09f1dec7-ee21-4744-9bc5-2f97fe28c65c)
 
 Como ya se sabe un ruido artefacto es un tipo de ruido que se genera artificialmente, en la siguiente imagen se observa la gráfica del ruido artefacto generado mostrando asi  una señal aleatoria que oscila dentro de un rango controlado este al ser aleatorio, significa que no sigue un patrón específico. Esto es típico en este tipo de ruido, la presencia de un ruido artefacto puede alterar significativamente la calidad de una señal ya que este al ser un ruido no deseado puede llegar aparecer en un sistema debido a diversas razones, como interferencias externas, errores en la medición o imperfecciones en el procesamiento de la señal.
 
@@ -204,6 +204,6 @@ El SNR es una métrica clave para evaluar la calidad de la señal. Se calcula co
 
 En esta sección, se superponen las gráficas de la señal original y las señales con ruido en una sola figura. Esto facilita la comparación visual y permite apreciar cómo cada tipo de ruido distorsiona la señal. La organización en subgráficas (plt.subplot) es especialmente útil para presentar múltiples señales de manera ordenada y clara. Esta comparación es fundamental para evaluar el impacto del ruido y para decidir qué técnicas de procesamiento son necesarias para mejorar la calidad de la señal.
 
-![comparacion_señales](imagenes/comparacion_señales.png)
+![Image](https://github.com/user-attachments/assets/48bf4fbe-d12d-4484-a4bc-ae6559672f38)
 
 Finalmente se comparan las señales adquiridas, en donde se puede distinguir que el ruido menos significativo en nuestra simulación fue el ruido de artefacto; en contraposición, el ruido gaussiano y el ruido de impulso tienen un mayor impacto sobre la señal original: Pese a todo lo anterior en las cuantro gráficas se puede distinguir el electrocardiograma y su diagnóstico sin ninguna dificultad.
