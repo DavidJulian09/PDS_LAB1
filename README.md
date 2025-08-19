@@ -220,3 +220,4 @@ En esta sección, se superponen las gráficas de la señal original y las señal
 ![Image](https://github.com/user-attachments/assets/48bf4fbe-d12d-4484-a4bc-ae6559672f38)
 
 Finalmente se comparan las señales adquiridas, en donde se puede distinguir que el ruido menos significativo en nuestra simulación fue el ruido de artefacto; en contraposición, el ruido gaussiano y el ruido de impulso tienen un mayor impacto sobre la señal original: Pese a todo lo anterior en las cuantro gráficas se puede distinguir el electrocardiograma y su diagnóstico sin ninguna dificultad.
+
